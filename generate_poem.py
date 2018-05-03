@@ -2,7 +2,6 @@
 import numpy as np
 import random
 from collections import defaultdict
-from scipy.misc import logsumexp
 
 # Other imports
 from make_model import load_count_dict

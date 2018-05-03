@@ -6,7 +6,7 @@ from collections import defaultdict
 # Other imports
 from make_model import load_count_dict
 
-OBJ_WORD_BIAS = 150000
+OBJ_WORD_BIAS = 3000
 
 def _post_process(poem_words):
     '''
@@ -112,7 +112,7 @@ def generate_poem_line_from_markov_model(markov_models, objects_in_scene=[]):
         # Adjust biases.
         for obj in objects_in_scene:
             if next_word in obj.get_words():
-                obj_biases[obj.name] = max(obj_biases[obj.name] / 10, 1)
+                obj_biases[obj.name] = max(obj_biases[obj.name] / 2, 1)
 
         if len(poem_words) > 7 and random.random() > i / float(max_poem_length):
             break

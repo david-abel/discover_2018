@@ -1,6 +1,6 @@
 #squid.py Library
 
-import RPi.GPIO as GPIO
+# import RPi.GPIO as GPIO
 import time
 
 class Button:
